@@ -44,7 +44,12 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(HP <= 0)
+        {
+            Debug.Log(this + "died");
+
+            Destroy(this);
+        }
     }
 
     IEnumerator Move()
@@ -62,6 +67,9 @@ public class Enemy : MonoBehaviour
                 yield return null;
             }
         }
-        
+        gameManager.TownHealth -= power;
+        Destroy(this);
     }
+
+    
 }
