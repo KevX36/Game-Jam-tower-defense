@@ -7,4 +7,5 @@ public class GameManager : MonoBehaviour
     public GameObject enemyPath;
 
     public int TownHealth;
+    
 }

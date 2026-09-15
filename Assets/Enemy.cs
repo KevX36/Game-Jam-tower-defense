@@ -48,7 +48,7 @@ public class Enemy : MonoBehaviour
         {
             Debug.Log(this + "died");
 
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 
@@ -67,8 +67,9 @@ public class Enemy : MonoBehaviour
                 yield return null;
             }
         }
+        Debug.Log(this + "attacked the town");
         gameManager.TownHealth -= power;
-        Destroy(this);
+        Destroy(this.gameObject);
     }
 
     
