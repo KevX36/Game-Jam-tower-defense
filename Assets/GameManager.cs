@@ -4,5 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public List<Transform> enemyPath = new List<Transform>();
+    public GameObject enemyPath;
+
+    public int TownHealth;
 }
