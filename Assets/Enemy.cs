@@ -44,6 +44,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //check if alive
         if(HP <= 0)
         {
             Debug.Log(this + "died");
