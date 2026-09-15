@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
         foreach (Transform childTransform in gameManager.enemyPath.transform)
         {
             if (!childTransform.CompareTag("point")) continue;
-
+            Debug.Log("added" + childTransform);
             path.Add(childTransform.position);
 
         }
@@ -51,13 +51,16 @@ public class Enemy : MonoBehaviour
     {
         for (int i = 1; i < path.Count; i++)
         {
-            Vector2 move = Vector2.MoveTowards(rb.position, path[i], speed * Time.fixedDeltaTime);
-            Debug.Log("Moving");
-            rb.MovePosition(move);
+            while (Vector2.Distance(rb.position, path[i]) > 0.9f)
+            {
+                Vector2 move = Vector2.MoveTowards(rb.position, path[i], speed * Time.fixedDeltaTime);
+                Debug.Log("Moving towards" + path[i]);
+                rb.MovePosition(move);
 
 
 
-            yield return null;
+                yield return null;
+            }
         }
         
     }
