@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
     public GameManager gameManager;
     public Rigidbody2D rb;
 
+    public bool active = false;
+
     public int speed = 2;
     public int HP = 10;
 
@@ -32,13 +34,7 @@ public class Enemy : MonoBehaviour
 
 
 
-        if (path.Count == 0) return;
-        this.transform.position = path[0];
-
-        if (path.Count > 1)
-        {
-            StartCoroutine(Move());
-        }
+        
     }
 
     // Update is called once per frame
@@ -50,6 +46,17 @@ public class Enemy : MonoBehaviour
             Debug.Log(this + "died");
 
             Destroy(this.gameObject);
+        }
+    }
+
+    public void Go()
+    {
+        if (path.Count == 0) return;
+        this.transform.position = path[0];
+        active = true;
+        if (path.Count > 1)
+        {
+            StartCoroutine(Move());
         }
     }
 
