@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 112038901211936977}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,6 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   gameManager: {fileID: 0}
   rb: {fileID: 1845317455382985399}
+  active: 0
   speed: 2
   HP: 20
   power: 1
