@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: cc9072d57b548c84ebbb462906e107b9
+guid: e7f4b1d4398f5524aafbc89f48dd0fcb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8432323353088069699
-    second: BossSprites_0
+      213: 7567571274315289350
+    second: Fast_SpriteSheet_0
   - first:
-      213: -1709953163896772833
-    second: BossSprites_1
+      213: 6718473161129897357
+    second: Fast_SpriteSheet_1
   - first:
-      213: 5213896435999728351
-    second: BossSprites_2
+      213: -965346186365048431
+    second: Fast_SpriteSheet_2
   - first:
-      213: 4567506154383153714
-    second: BossSprites_3
+      213: -8205025930819942294
+    second: Fast_SpriteSheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,89 +109,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BossSprites_0
+      name: Fast_SpriteSheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 912
-        height: 1200
+        width: 400
+        height: 320
       alignment: 9
-      pivot: {x: 0.5380844, y: 0.19660234}
+      pivot: {x: 0.47577956, y: 0.6766071}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dbf64f3369e5afa80800000000000000
-      internalID: -8432323353088069699
+      spriteID: 6035302baf9650960800000000000000
+      internalID: 7567571274315289350
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BossSprites_1
+      name: Fast_SpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 912
+        x: 400
         y: 0
-        width: 912
-        height: 1200
+        width: 400
+        height: 320
       alignment: 9
-      pivot: {x: 0.52231586, y: 0.19896103}
+      pivot: {x: 0.48788956, y: 0.6766071}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f17a06b38a60548e0800000000000000
-      internalID: -1709953163896772833
+      spriteID: d8da42a7ebfcc3d50800000000000000
+      internalID: 6718473161129897357
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BossSprites_2
+      name: Fast_SpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 1824
+        x: 800
         y: 0
-        width: 912
-        height: 1200
+        width: 400
+        height: 320
       alignment: 9
-      pivot: {x: 0.5148773, y: 0.20461434}
+      pivot: {x: 0.49192628, y: 0.6866989}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd260732f2b7b5840800000000000000
-      internalID: 5213896435999728351
+      spriteID: 199ee6412c66a92f0800000000000000
+      internalID: -965346186365048431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BossSprites_3
+      name: Fast_SpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 2736
+        x: 1200
         y: 0
-        width: 912
-        height: 1200
+        width: 400
+        height: 320
       alignment: 9
-      pivot: {x: 0.49684358, y: 0.20497607}
+      pivot: {x: 0.49192628, y: 0.6715611}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 23a1b61d5aa036f30800000000000000
-      internalID: 4567506154383153714
+      spriteID: a68cb945364e12e80800000000000000
+      internalID: -8205025930819942294
       vertices: []
       indices: 
       edges: []
@@ -200,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 40335f3106e8ae4428654a681743521e
+    spriteID: cd0f694a2a087c24aa389e4a24735987
     internalID: 0
     vertices: []
     indices: 
@@ -210,12 +210,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":912.0,"y":1200.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":400.0,"y":320.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      BossSprites_0: -8432323353088069699
-      BossSprites_1: -1709953163896772833
-      BossSprites_2: 5213896435999728351
-      BossSprites_3: 4567506154383153714
+      Fast_SpriteSheet_0: 7567571274315289350
+      Fast_SpriteSheet_1: 6718473161129897357
+      Fast_SpriteSheet_2: -965346186365048431
+      Fast_SpriteSheet_3: -8205025930819942294
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

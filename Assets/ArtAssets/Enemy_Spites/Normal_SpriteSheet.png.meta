@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: e7f4b1d4398f5524aafbc89f48dd0fcb
+guid: fa459f8f7a1c1be46a488c164d3540ff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7567571274315289350
-    second: Fast_SpriteSheet_0
+      213: 389554759508101872
+    second: Normal_SpriteSheet_0
   - first:
-      213: 6718473161129897357
-    second: Fast_SpriteSheet_1
+      213: 3942599693220374091
+    second: Normal_SpriteSheet_1
   - first:
-      213: -965346186365048431
-    second: Fast_SpriteSheet_2
+      213: -3156807337766353613
+    second: Normal_SpriteSheet_2
   - first:
-      213: -8205025930819942294
-    second: Fast_SpriteSheet_3
+      213: 6915202498565298221
+    second: Normal_SpriteSheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,89 +109,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fast_SpriteSheet_0
+      name: Normal_SpriteSheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 400
+        width: 335
         height: 320
       alignment: 9
-      pivot: {x: 0.48385304, y: 0.68165296}
+      pivot: {x: 0.47174287, y: 0.123889886}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6035302baf9650960800000000000000
-      internalID: 7567571274315289350
+      spriteID: 0fa0b056df9f76500800000000000000
+      internalID: 389554759508101872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fast_SpriteSheet_1
+      name: Normal_SpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 400
+        x: 335
         y: 0
-        width: 400
+        width: 335
         height: 320
       alignment: 9
-      pivot: {x: 0.48788956, y: 0.6766071}
+      pivot: {x: 0.5322938, y: 0.12811585}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d8da42a7ebfcc3d50800000000000000
-      internalID: 6718473161129897357
+      spriteID: b46e6fd388de6b630800000000000000
+      internalID: 3942599693220374091
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fast_SpriteSheet_2
+      name: Normal_SpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 800
+        x: 670
         y: 0
-        width: 400
+        width: 396
         height: 320
       alignment: 9
-      pivot: {x: 0.49192628, y: 0.68165296}
+      pivot: {x: 0.49598324, y: 0.123889886}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 199ee6412c66a92f0800000000000000
-      internalID: -965346186365048431
+      spriteID: 3350718a374c034d0800000000000000
+      internalID: -3156807337766353613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fast_SpriteSheet_3
+      name: Normal_SpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 1200
+        x: 1067
         y: 0
-        width: 400
+        width: 273
         height: 320
       alignment: 9
-      pivot: {x: 0.4878897, y: 0.6766071}
+      pivot: {x: 0.5453355, y: 0.11966393}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a68cb945364e12e80800000000000000
-      internalID: -8205025930819942294
+      spriteID: d28d0ecb80cb7ff50800000000000000
+      internalID: 6915202498565298221
       vertices: []
       indices: 
       edges: []
@@ -200,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e738919d32a12a94882915dc2ca5f4a6
+    spriteID: 98a28d62eff063f4abbadcc820cd5aaf
     internalID: 0
     vertices: []
     indices: 
@@ -210,12 +210,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":400.0,"y":320.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":335.0,"y":320.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Fast_SpriteSheet_0: 7567571274315289350
-      Fast_SpriteSheet_1: 6718473161129897357
-      Fast_SpriteSheet_2: -965346186365048431
-      Fast_SpriteSheet_3: -8205025930819942294
+      Normal_SpriteSheet_0: 389554759508101872
+      Normal_SpriteSheet_1: 3942599693220374091
+      Normal_SpriteSheet_2: -3156807337766353613
+      Normal_SpriteSheet_3: 6915202498565298221
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
