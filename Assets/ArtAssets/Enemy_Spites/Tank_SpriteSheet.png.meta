@@ -1,19 +1,76 @@
 fileFormatVersion: 2
-guid: fa459f8f7a1c1be46a488c164d3540ff
+guid: 61f80025ab1d17e4792b50cc3332eba4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 389554759508101872
-    second: Normal_SpriteSheet_0
+      213: 1771469339236488794
+    second: Tank_SpriteSheet_0
   - first:
-      213: 3942599693220374091
-    second: Normal_SpriteSheet_1
+      213: 3580534106711620326
+    second: Tank_SpriteSheet_1
   - first:
-      213: -3156807337766353613
-    second: Normal_SpriteSheet_2
+      213: 2354201463301828825
+    second: Tank_SpriteSheet_2
   - first:
-      213: 6915202498565298221
-    second: Normal_SpriteSheet_3
+      213: 3579610429148529264
+    second: Tank_SpriteSheet_3
+  - first:
+      213: 2286346898728442372
+    second: Tank_SpriteSheet_4
+  - first:
+      213: 7819185600208774615
+    second: Tank_SpriteSheet_5
+  - first:
+      213: 393926170430508745
+    second: Tank_SpriteSheet_6
+  - first:
+      213: -2717520224388720352
+    second: Tank_SpriteSheet_7
+  - first:
+      213: 5512643866050912747
+    second: Tank_SpriteSheet_8
+  - first:
+      213: 6459298858911037712
+    second: Tank_SpriteSheet_9
+  - first:
+      213: -1505429599840298717
+    second: Tank_SpriteSheet_10
+  - first:
+      213: -1311897276423487091
+    second: Tank_SpriteSheet_11
+  - first:
+      213: 8660829755561884576
+    second: Tank_SpriteSheet_12
+  - first:
+      213: 4990062911620762111
+    second: Tank_SpriteSheet_13
+  - first:
+      213: 5525764683456582865
+    second: Tank_SpriteSheet_14
+  - first:
+      213: 8994821588689524980
+    second: Tank_SpriteSheet_15
+  - first:
+      213: 7329539692190022988
+    second: Tank_SpriteSheet_16
+  - first:
+      213: -5762663873352273468
+    second: Tank_SpriteSheet_17
+  - first:
+      213: 4280370023514254024
+    second: Tank_SpriteSheet_18
+  - first:
+      213: 5598001960724242333
+    second: Tank_SpriteSheet_19
+  - first:
+      213: 4481115889782675344
+    second: Tank_SpriteSheet_20
+  - first:
+      213: 1169328919333851305
+    second: Tank_SpriteSheet_21
+  - first:
+      213: 2599572702123156331
+    second: Tank_SpriteSheet_22
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,89 +166,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Normal_SpriteSheet_0
+      name: Tank_SpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 0
         y: 0
-        width: 335
-        height: 320
+        width: 650
+        height: 690
       alignment: 9
-      pivot: {x: 0.50000006, y: 0.118612885}
+      pivot: {x: 0.55247754, y: 0.24902038}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0fa0b056df9f76500800000000000000
-      internalID: 389554759508101872
+      spriteID: a56dfa77af5859810800000000000000
+      internalID: 1771469339236488794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Normal_SpriteSheet_1
+      name: Tank_SpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 337
+        x: 650
         y: 0
-        width: 335
-        height: 320
+        width: 650
+        height: 690
       alignment: 9
-      pivot: {x: 0.5417439, y: 0.118612885}
+      pivot: {x: 0.55247754, y: 0.24141493}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b46e6fd388de6b630800000000000000
-      internalID: 3942599693220374091
+      spriteID: 6ea77b0bccc90b130800000000000000
+      internalID: 3580534106711620326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Normal_SpriteSheet_2
+      name: Tank_SpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 671
+        x: 1300
         y: 0
-        width: 400
-        height: 320
+        width: 650
+        height: 690
       alignment: 9
-      pivot: {x: 0.5000002, y: 0.12258567}
+      pivot: {x: 0.560551, y: 0.24521765}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3350718a374c034d0800000000000000
-      internalID: -3156807337766353613
+      spriteID: 9d07fcdf1cdcba020800000000000000
+      internalID: 2354201463301828825
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Normal_SpriteSheet_3
+      name: Tank_SpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 1069
+        x: 1950
         y: 0
-        width: 271
-        height: 320
+        width: 650
+        height: 690
       alignment: 9
-      pivot: {x: 0.570367, y: 0.110667326}
+      pivot: {x: 0.5524775, y: 0.24521765}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d28d0ecb80cb7ff50800000000000000
-      internalID: 6915202498565298221
+      spriteID: 0728eaf38b45da130800000000000000
+      internalID: 3579610429148529264
       vertices: []
       indices: 
       edges: []
@@ -200,7 +257,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a8349453c269b384e837dd7d9eed6db7
+    spriteID: bb5557b92071f5e4b8a586df22b23934
     internalID: 0
     vertices: []
     indices: 
@@ -210,12 +267,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":335.0,"y":320.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":650.0,"y":690.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Normal_SpriteSheet_0: 389554759508101872
-      Normal_SpriteSheet_1: 3942599693220374091
-      Normal_SpriteSheet_2: -3156807337766353613
-      Normal_SpriteSheet_3: 6915202498565298221
+      Tank_SpriteSheet_0: 1771469339236488794
+      Tank_SpriteSheet_1: 3580534106711620326
+      Tank_SpriteSheet_2: 2354201463301828825
+      Tank_SpriteSheet_3: 3579610429148529264
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
