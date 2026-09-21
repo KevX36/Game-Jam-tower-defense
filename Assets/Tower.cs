@@ -6,8 +6,9 @@ using static UnityEngine.GraphicsBuffer;
 public class Tower : MonoBehaviour
 {
     public int DMG = 1;
-    public int fireRate = 5;
+    public float fireRate = 5;
 
+    
 
     public List<Enemy> targets = new List<Enemy>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -40,5 +41,10 @@ public class Tower : MonoBehaviour
             targets.Remove(collision.gameObject.GetComponent<Enemy>());
             Debug.Log($"removed {collision} to targets");
         }
+    }
+
+    public void fire()
+    {
+
     }
 }
