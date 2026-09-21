@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
 
     public Rigidbody2D rb;
 
-    public void shoot(Enemy target, int power, float speed)
+    public virtual void shoot(Enemy target, int power, float speed)
     {
 
         Debug.Log("shot bullet");
