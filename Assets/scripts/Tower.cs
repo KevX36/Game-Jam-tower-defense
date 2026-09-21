@@ -22,7 +22,7 @@ public class Tower : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        fireRange = this.gameObject.GetComponent<Collider2D>();
         shotTimer = shotCoolDown;
         
     }

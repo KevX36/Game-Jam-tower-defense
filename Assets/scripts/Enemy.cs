@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
 
     public int power = 1;
 
-    public Collider2D col;
+    
 
     public List<Vector2> path = new List<Vector2>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -30,12 +30,15 @@ public class Enemy : MonoBehaviour
             path.Add(childTransform.position);
 
         }
-
+        //set on for debugging, set off for game
         if (active)
         {
             Go();
         }
-
+        else
+        {
+            this.gameObject.SetActive(false);
+        }
 
         
     }

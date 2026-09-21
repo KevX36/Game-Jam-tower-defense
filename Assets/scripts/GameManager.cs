@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
         {
             for(int i = 0; i < wave1enemies.Count; i++)
             {
+                wave1enemies[i].gameObject.SetActive(true);
                 wave1enemies[i].Go();
 
 
