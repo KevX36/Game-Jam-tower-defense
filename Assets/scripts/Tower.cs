@@ -13,16 +13,14 @@ public class Tower : MonoBehaviour
     public float shotCoolDown = 5;
     public List<Bullet> bullets = new List<Bullet>();
     public float shotTimer;
-    
+
+    public int bulletSpeed = 5;
 
     public List<Enemy> targets = new List<Enemy>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        for(int i = 0; i < bullets.Count; i++)
-        {
-            bullets[i].gameObject.SetActive(false);
-        }
+        
         shotTimer = shotCoolDown;
         
     }
@@ -68,7 +66,7 @@ public class Tower : MonoBehaviour
                 Debug.Log("shooting");
                 bullets[i].transform.position = transform.position;
                 bullets[i].gameObject.SetActive(true);
-                bullets[i].shoot(targets[0],DMG);
+                bullets[i].shoot(targets[0],DMG,bulletSpeed);
                 
                 break;
             }

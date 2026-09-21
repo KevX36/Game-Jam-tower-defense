@@ -40,6 +40,11 @@ public class Enemy : MonoBehaviour
         
     }
 
+    public void TakeDamage(int DMG)
+    {
+        HP -= DMG;
+        Debug.Log("got hit");
+    }
     // Update is called once per frame
     void Update()
     {

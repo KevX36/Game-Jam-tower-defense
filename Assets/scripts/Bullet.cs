@@ -3,19 +3,23 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    private void Start()
+    {
+        rb = this.GetComponent<Rigidbody2D>();
+        this.gameObject.SetActive(false);
+    }
     
-    public int speed = 15;
 
     public Rigidbody2D rb;
 
-    public void shoot(Enemy target, int power)
+    public void shoot(Enemy target, int power, float speed)
     {
 
         Debug.Log("shot bullet");
-        Fly(target,power);
+        StartCoroutine(Fly(target, power,speed));
     }
 
-    IEnumerator Fly(Enemy Target, int power)
+    IEnumerator Fly(Enemy Target, int power, float speed)
     {
         while (Vector2.Distance(rb.position, Target.transform.position) > 0.9f && Target != null)
         {
@@ -29,7 +33,12 @@ public class Bullet : MonoBehaviour
         }
         if (Target != null)
         {
-            Target.HP -= power;
+            Debug.Log("hit target");
+            Target.TakeDamage(power);
+        }
+        else
+        {
+            Debug.Log("target already died");
         }
         this.gameObject.SetActive(false);
     }

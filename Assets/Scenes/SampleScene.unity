@@ -1207,7 +1207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5640719931025547944, guid: c236a1f30d4a2084498e6d15b6ab3133, type: 3}
       propertyPath: fireRate
-      value: 300
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7747796093437141074, guid: c236a1f30d4a2084498e6d15b6ab3133, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1248,6 +1248,10 @@ PrefabInstance:
     - target: {fileID: 7747796093437141074, guid: c236a1f30d4a2084498e6d15b6ab3133, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8361493364569620687, guid: c236a1f30d4a2084498e6d15b6ab3133, type: 3}
+      propertyPath: speed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
