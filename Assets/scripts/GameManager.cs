@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public GameObject enemyPath;
     //towns health
     public int TownHealth;
+    //current cash
+    public int Gold;
     //current wave
     public int currentWave = 1;
     //enemy waves

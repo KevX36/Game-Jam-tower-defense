@@ -3,19 +3,19 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public Enemy Target;
+    
     public int speed = 15;
 
-    public int power = 5;
     public Rigidbody2D rb;
 
-    // Update is called once per frame
-    void Update()
+    public void shoot(Enemy target, int power)
     {
-        
+
+
+        Fly(target,power);
     }
 
-    IEnumerator Fly()
+    IEnumerator Fly(Enemy Target, int power)
     {
         while (Vector2.Distance(rb.position, Target.transform.position) > 0.9f && Target != null)
         {
@@ -31,5 +31,6 @@ public class Bullet : MonoBehaviour
         {
             Target.HP -= power;
         }
+        this.gameObject.SetActive(false);
     }
 }
