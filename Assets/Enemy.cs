@@ -30,8 +30,11 @@ public class Enemy : MonoBehaviour
             path.Add(childTransform.position);
 
         }
-        
 
+        if (active)
+        {
+            Go();
+        }
 
 
         
@@ -67,7 +70,7 @@ public class Enemy : MonoBehaviour
             while (Vector2.Distance(rb.position, path[i]) > 0.9f)
             {
                 Vector2 move = Vector2.MoveTowards(rb.position, path[i], speed * Time.fixedDeltaTime);
-                Debug.Log("Moving towards" + path[i]);
+                //Debug.Log("Moving towards" + path[i]);
                 rb.MovePosition(move);
 
 
