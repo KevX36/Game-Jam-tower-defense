@@ -16,6 +16,8 @@ public class Tower : MonoBehaviour
 
     public int bulletSpeed = 5;
 
+    public Collider2D fireRange;
+
     public List<Enemy> targets = new List<Enemy>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
