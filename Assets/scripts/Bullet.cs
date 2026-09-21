@@ -26,20 +26,18 @@ public class Bullet : MonoBehaviour
             Vector2 move = Vector2.MoveTowards(rb.position, Target.transform.position, speed * Time.fixedDeltaTime);
             Debug.Log("Moving towards" + Target.transform.position);
             rb.MovePosition(move);
-
+            if (Target == null)
+            {
+                Debug.Log("target died before it was reached");
+                this.gameObject.SetActive(false);
+            }
 
 
             yield return null;
         }
-        if (Target != null)
-        {
-            Debug.Log("hit target");
-            Target.TakeDamage(power);
-        }
-        else
-        {
-            Debug.Log("target already died");
-        }
+        
+        Debug.Log("hit target");
+        Target.TakeDamage(power);
         this.gameObject.SetActive(false);
     }
 }

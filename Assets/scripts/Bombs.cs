@@ -35,7 +35,7 @@ public class Bombs : Bullet
         }
         Debug.Log("bomb go boom");
         blastRange.enabled = true;
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(0.001f);
         this.gameObject.SetActive(false);
     }
 
@@ -47,4 +47,5 @@ public class Bombs : Bullet
             
         }
     }
+    
 }
