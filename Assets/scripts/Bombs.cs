@@ -7,8 +7,10 @@ public class Bombs : Bullet
     {
         rb = this.GetComponent<Rigidbody2D>();
         blastRange = this.GetComponent<Collider2D>();
+        blastRange.enabled = false;
         this.gameObject.SetActive(false);
     }
+    public GameObject target;
     public int Power;
     public Collider2D blastRange;
     public override void shoot(Enemy target, int power, float speed)
@@ -20,9 +22,10 @@ public class Bombs : Bullet
 
     IEnumerator Fly(Transform Target, float speed)
     {
-        while (Vector2.Distance(rb.position, Target.position) > 0.9f && Target != null)
+        target.transform.position = Target.transform.position;
+        while (Vector2.Distance(rb.position, target.transform.position) > 0.9f && Target != null)
         {
-            Vector2 move = Vector2.MoveTowards(rb.position, Target.transform.position, speed * Time.fixedDeltaTime);
+            Vector2 move = Vector2.MoveTowards(rb.position, target.transform.position, speed * Time.fixedDeltaTime);
             Debug.Log("Moving towards" + Target.position);
             rb.MovePosition(move);
 
@@ -30,12 +33,9 @@ public class Bombs : Bullet
 
             yield return null;
         }
-        if (Target != null)
-        {
-            Debug.Log("hit target");
-            
-        }
-        yield return new WaitForSecondsRealtime(1);
+        Debug.Log("bomb go boom");
+        blastRange.enabled = true;
+        yield return new WaitForSecondsRealtime(0.5f);
         this.gameObject.SetActive(false);
     }
 
