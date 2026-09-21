@@ -8,35 +8,32 @@ using static UnityEngine.GraphicsBuffer;
 public class Tower : MonoBehaviour
 {
     public int DMG = 1;
-    public float fireRate = 300;
+    public float fireRate = 3;
 
+    public float shotCoolDown = 5;
     public List<Bullet> bullets = new List<Bullet>();
-    private float shotTimer;
+    public float shotTimer;
     
 
     public List<Enemy> targets = new List<Enemy>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
-        shotTimer = fireRate;
-        foreach (Bullet bullet in this.transform)
+        for(int i = 0; i < bullets.Count; i++)
         {
-            if (!bullet.CompareTag("Bullet")) continue;
-            Debug.Log("added" + bullet);
-            bullets.Add(bullet.GetComponent<Bullet>());
-            bullet.gameObject.SetActive(false);
-
+            bullets[i].gameObject.SetActive(false);
         }
+        shotTimer = shotCoolDown;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        shotTimer -= Time.deltaTime;
+        shotTimer -= Time.deltaTime*fireRate;
         if (targets.Any() && shotTimer <=0)
         {
-            shotTimer = fireRate;
+            shotTimer = shotCoolDown;
             fire();
         }
     }
@@ -63,11 +60,12 @@ public class Tower : MonoBehaviour
 
     public void fire()
     {
-        Debug.Log("shooting");
+        
         for(int i = 0; i< bullets.Count; i++)
         {
             if (!bullets[i].gameObject.activeInHierarchy)
             {
+                Debug.Log("shooting");
                 bullets[i].transform.position = transform.position;
                 bullets[i].gameObject.SetActive(true);
                 bullets[i].shoot(targets[0],DMG);
