@@ -1216,6 +1216,7 @@ MonoBehaviour:
   waveSpeed3: 5
   waveSpeed4: 5
   waveSpeed5: 5
+  wavePause: 3
 --- !u!4 &1609823299
 Transform:
   m_ObjectHideFlags: 0
@@ -1559,6 +1560,10 @@ PrefabInstance:
     - target: {fileID: 2677640633089589851, guid: 700842383656dce47b5a5541c1b884f6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2694117638019051393, guid: 700842383656dce47b5a5541c1b884f6, type: 3}
+      propertyPath: m_Name
+      value: Upgrade Button
       objectReference: {fileID: 0}
     - target: {fileID: 3139513830208742219, guid: 700842383656dce47b5a5541c1b884f6, type: 3}
       propertyPath: m_Camera

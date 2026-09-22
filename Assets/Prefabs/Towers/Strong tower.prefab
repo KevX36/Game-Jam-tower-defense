@@ -191,7 +191,7 @@ MonoBehaviour:
   blastRange: 3
   fireRange: {fileID: 0}
   targets: []
-  towerType: 0
+  towerType: 2
   UpgradeBoost: 1
 --- !u!1001 &83968994826124170
 PrefabInstance:

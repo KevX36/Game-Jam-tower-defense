@@ -552,7 +552,7 @@ MonoBehaviour:
   blastRange: 3
   fireRange: {fileID: 0}
   targets: []
-  towerType: 0
+  towerType: 3
   UpgradeBoost: 0.2
 --- !u!1 &6043515558663205528
 GameObject:
