@@ -6,7 +6,9 @@ public class TowerSlot : MonoBehaviour
     //set basic tower to 0, fast to 1, strong to 2, and bomb to 3
     public Tower[] towers = new Tower[4];
 
+    public TextMeshProUGUI[] shopButtonText = new TextMeshProUGUI[4];
 
+    public TextMeshProUGUI upgardeButtonText;
     private int towerLevel = 1;
     private int[] defualtPower = new int[4];
 
@@ -16,6 +18,7 @@ public class TowerSlot : MonoBehaviour
 
     //changes shop to go between buy and sell/upgrade mode
     public bool towerBought = false;
+    public bool menuOpen = false;
 
     public GameObject buyMenu;
     public GameObject sellAndUpgradeMenu;
@@ -31,8 +34,30 @@ public class TowerSlot : MonoBehaviour
             defualtPower[i] = towers[i].DMG;
             defualtFireRate[i] = towers[i].fireRate;
             defualtShotSpeed[i] = towers[i].bulletSpeed;
+            
             towers[i].gameObject.SetActive(false);
         }
+        shopButtonText[0].text = $"archer ({towers[0].cost})";
+        shopButtonText[1].text = $"Mage ({towers[1].cost})";
+        shopButtonText[2].text = $"Balasita ({towers[2].cost})";
+        shopButtonText[3].text = $"Bomb ({towers[3].cost})";
+    }
+
+    private void OnMouseDown()
+    {
+        if (!menuOpen)
+        {
+            ShowMenu();
+        }
+    }
+    private void Update()
+    {
+        //closes menu if you move out of range
+        if (menuOpen)
+        {
+
+        }
+        
     }
 
     public void BuyBasicTower()
@@ -65,15 +90,19 @@ public class TowerSlot : MonoBehaviour
     {
         if(currentTower.cost <= gameManager.Gold)
         {
+            
             Debug.Log("bought tower");
             gameManager.Gold -= currentTower.cost;
+            gameManager.UpdateGold();
             currentTower.gameObject.SetActive(true);
             towerBought = true;
+            HideMenus();
         }
         else
         {
             Debug.Log("not enough gold");
         }
+        
     }
 
     public void SellTower()
@@ -94,8 +123,24 @@ public class TowerSlot : MonoBehaviour
         }
     }
 
-
-
+    public void HideMenus()
+    {
+        buyMenu.gameObject.SetActive(false);
+        sellAndUpgradeMenu.gameObject.SetActive(false);
+        menuOpen = false;
+    }
+    public void ShowMenu()
+    {
+        if (towerBought)
+        {
+            sellAndUpgradeMenu.gameObject.SetActive(true);
+        }
+        else
+        {
+            buyMenu.gameObject.SetActive(true);
+        }
+        menuOpen = true;
+    }
 
 
 

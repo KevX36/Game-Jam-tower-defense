@@ -50,17 +50,18 @@ public class GameManager : MonoBehaviour
 
     public void UpdateGold()
     {
-
+        goldAmount.text = $"Gold: {Gold}";
     }
 
     public void UpdateHealth()
     {
-
+        HealthLeft.text = $"Town Health: {TownHealth}";
     }
 
     private void Start()
     {
-        
+        UpdateGold();
+        UpdateHealth();
     }
     private void Update()
     {

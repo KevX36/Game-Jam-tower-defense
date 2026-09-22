@@ -60,6 +60,7 @@ public class Enemy : MonoBehaviour
         {
             Debug.Log(this + "died");
             gameManager.Gold += goldDropped;
+            gameManager.UpdateGold();
             Destroy(this.gameObject);
         }
     }
@@ -92,6 +93,7 @@ public class Enemy : MonoBehaviour
         }
         Debug.Log(this + "attacked the town");
         gameManager.TownHealth -= power;
+        gameManager.UpdateHealth();
         Destroy(this.gameObject);
     }
 
