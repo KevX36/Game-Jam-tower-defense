@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class TowerSlot : MonoBehaviour
 {
@@ -47,16 +48,16 @@ public class TowerSlot : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("opening menu");
+        Debug.Log("clicked on");
         if (!menuOpen)
         {
             ShowMenu();
         }
     }
-
+    
     private void OnMouseExit()
     {
-        Debug.Log("closing menu");
+        Debug.Log("auto closing menu");
         if (menuOpen)
         {
             HideMenus();
