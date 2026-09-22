@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f610c639375751b4698b9cc72d38264c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
-  speed: 3
   rb: {fileID: 0}
+  targetEnemy: {fileID: 0}
 --- !u!212 &2045987132062992037
 SpriteRenderer:
   serializedVersion: 2
@@ -95,9 +95,9 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -4346244404228752641, guid: fcf3c28f8d08e904a871d614f511715c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
