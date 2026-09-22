@@ -15,6 +15,7 @@ public class Bombs : Bullet
     public Collider2D blastRange;
     public override void shoot(Enemy target, int power, float speed)
     {
+        
         Power = power;
         Debug.Log("shot bullet");
         StartCoroutine(Fly(target.transform, speed));

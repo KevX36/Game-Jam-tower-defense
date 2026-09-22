@@ -7,13 +7,18 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Tower : MonoBehaviour
 {
+    //cost to buy tower
+    public int cost = 5;
+    //damage shots will do
     public int DMG = 1;
+    //mutliper for shot speed
     public float fireRate = 3;
-
+    //time to shot
     public float shotCoolDown = 5;
     public List<Bullet> bullets = new List<Bullet>();
+    //countdown to shoot
     public float shotTimer;
-
+    //speed of shots after fired
     public int bulletSpeed = 5;
 
     public Collider2D fireRange;
@@ -37,7 +42,7 @@ public class Tower : MonoBehaviour
             fire();
         }
     }
-
+    //checks when enemies enter firing range
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("enemy enterd range");
@@ -47,7 +52,7 @@ public class Tower : MonoBehaviour
             Debug.Log($"added {collision} to targets");
         }
     }
-
+    //checks when enemies leave firing range
     private void OnTriggerExit2D(Collider2D collision)
     {
         Debug.Log("enemy left range");
@@ -57,7 +62,7 @@ public class Tower : MonoBehaviour
             Debug.Log($"removed {collision} to targets");
         }
     }
-
+    //makes the tower shoot the first enemy to enter firing range
     public void fire()
     {
         
@@ -73,5 +78,10 @@ public class Tower : MonoBehaviour
                 break;
             }
         }
+    }
+    //add if there is time
+    public void upgrade()
+    {
+
     }
 }
