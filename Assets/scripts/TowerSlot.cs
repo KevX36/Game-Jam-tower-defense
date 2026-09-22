@@ -122,17 +122,17 @@ public class TowerSlot : MonoBehaviour
     
     public void SwapMenu()
     {
-        if (towerBought)
+        if (!towerBought)
         {
             buyMenu.gameObject.SetActive(false);
             sellAndUpgradeMenu.gameObject.SetActive(true);
-            towerBought = false;
+            towerBought = true;
         }
         else
         {
             sellAndUpgradeMenu.gameObject.SetActive(false);
             buyMenu.gameObject.SetActive(true);
-            towerBought = true;
+            towerBought = false;
         }
         
     }
