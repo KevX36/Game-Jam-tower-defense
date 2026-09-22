@@ -1,9 +1,12 @@
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.EventSystems;
 
 public class TowerSlot : MonoBehaviour
 {
+
+    
     //set basic tower to 0, fast to 1, strong to 2, and bomb to 3
     public Tower[] towers = new Tower[4];
 
@@ -21,7 +24,7 @@ public class TowerSlot : MonoBehaviour
 
     //changes shop to go between buy and sell/upgrade mode
     public bool towerBought = false;
-    public bool menuOpen = false;
+    
 
     public GameObject buyMenu;
     public GameObject sellAndUpgradeMenu;
@@ -45,24 +48,7 @@ public class TowerSlot : MonoBehaviour
         shopButtonText[2].text = $"Balasita ({towers[2].cost})";
         shopButtonText[3].text = $"Bomb ({towers[3].cost})";
     }
-
-    private void OnMouseDown()
-    {
-        Debug.Log("clicked on");
-        if (!menuOpen)
-        {
-            ShowMenu();
-        }
-    }
     
-    private void OnMouseExit()
-    {
-        Debug.Log("auto closing menu");
-        if (menuOpen)
-        {
-            HideMenus();
-        }
-    }
 
     public void UpdatePriceText()
     {
@@ -105,8 +91,8 @@ public class TowerSlot : MonoBehaviour
             gameManager.Gold -= currentTower.cost;
             gameManager.UpdateGold();
             currentTower.gameObject.SetActive(true);
-            towerBought = true;
-            HideMenus();
+            
+            SwapMenu();
         }
         else
         {
@@ -122,8 +108,8 @@ public class TowerSlot : MonoBehaviour
         currentTower = null;
 
         towerLevel = 1;
-        towerBought = false;
-
+        
+        SwapMenu();
         for (int i = 0; i < towers.Length; i++)
         {
             towers[i].DMG=defualtPower[i];
@@ -133,23 +119,22 @@ public class TowerSlot : MonoBehaviour
         }
     }
 
-    public void HideMenus()
-    {
-        buyMenu.gameObject.SetActive(false);
-        sellAndUpgradeMenu.gameObject.SetActive(false);
-        menuOpen = false;
-    }
-    public void ShowMenu()
+    
+    public void SwapMenu()
     {
         if (towerBought)
         {
+            buyMenu.gameObject.SetActive(false);
             sellAndUpgradeMenu.gameObject.SetActive(true);
+            towerBought = false;
         }
         else
         {
+            sellAndUpgradeMenu.gameObject.SetActive(false);
             buyMenu.gameObject.SetActive(true);
+            towerBought = true;
         }
-        menuOpen = true;
+        
     }
 
 
