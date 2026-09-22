@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
 
     public float wavePause = 3;
 
+    public bool debuging = false;
+
     IEnumerator wave1()
     {
         while (wave1enemies.Count > 0)
@@ -146,7 +148,10 @@ public class GameManager : MonoBehaviour
     {
         UpdateGold();
         UpdateHealth();
-        StartCoroutine(wave1());
+        if (!debuging)
+        {
+            StartCoroutine(wave1());
+        }
     }
     private void Update()
     {
