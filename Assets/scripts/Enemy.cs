@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
         foreach (Transform childTransform in gameManager.enemyPath.transform)
         {
             if (!childTransform.CompareTag("point")) continue;
-            Debug.Log("added" + childTransform);
+            //Debug.Log("added" + childTransform);
             path.Add(childTransform.position);
 
         }

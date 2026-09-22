@@ -9,6 +9,8 @@ public class TowerSlot : MonoBehaviour
     public TextMeshProUGUI[] shopButtonText = new TextMeshProUGUI[4];
 
     public TextMeshProUGUI upgardeButtonText;
+
+    public TextMeshProUGUI sellButtonText;
     private int towerLevel = 1;
     private int[] defualtPower = new int[4];
 
@@ -45,19 +47,26 @@ public class TowerSlot : MonoBehaviour
 
     private void OnMouseDown()
     {
+        Debug.Log("opening menu");
         if (!menuOpen)
         {
             ShowMenu();
         }
     }
-    private void Update()
+
+    private void OnMouseExit()
     {
-        //closes menu if you move out of range
+        Debug.Log("closing menu");
         if (menuOpen)
         {
-
+            HideMenus();
         }
-        
+    }
+
+    public void UpdatePriceText()
+    {
+        sellButtonText.text = $"Sell: {(currentTower.cost * towerLevel)/3}";
+        upgardeButtonText.text = $"Upgrade {(currentTower.cost * towerLevel) / 2}: ";
     }
 
     public void BuyBasicTower()
@@ -107,7 +116,7 @@ public class TowerSlot : MonoBehaviour
 
     public void SellTower()
     {
-        gameManager.Gold += (currentTower.cost * towerLevel) / 2;
+        gameManager.Gold += (currentTower.cost * towerLevel) / 3;
         
         currentTower = null;
 
