@@ -20,7 +20,8 @@ public class Tower : MonoBehaviour
     public float shotTimer;
     //speed of shots after fired
     public int bulletSpeed = 5;
-
+    //only used for bomb tower
+    public float blastRange = 3;
     public Collider2D fireRange;
 
     public List<Enemy> targets = new List<Enemy>();
@@ -73,13 +74,22 @@ public class Tower : MonoBehaviour
                 Debug.Log("shooting");
                 bullets[i].transform.position = transform.position;
                 bullets[i].gameObject.SetActive(true);
-                bullets[i].shoot(targets[0],DMG,bulletSpeed);
+                bullets[i].shoot(targets[0],DMG,bulletSpeed, blastRange);
                 
                 break;
             }
         }
     }
-    //add if there is time
+    //boost main property of tower whenever upgrade is bought 
+    public enum TowerType
+    {
+        basic,
+        fast,
+        strong,
+        AoE
+
+    }
+    public TowerType towerType;
     public void upgrade()
     {
 

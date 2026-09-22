@@ -6,14 +6,14 @@ public class Bombs : Bullet
     private void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        blastRange = this.GetComponent<Collider2D>();
+        blastRange = this.GetComponent<CircleCollider2D>();
         blastRange.enabled = false;
         this.gameObject.SetActive(false);
     }
     public GameObject target;
     public int Power;
-    public Collider2D blastRange;
-    public override void shoot(Enemy target, int power, float speed)
+    public CircleCollider2D blastRange;
+    public override void shoot(Enemy target, int power, float speed,float Blast)
     {
         
         Power = power;
