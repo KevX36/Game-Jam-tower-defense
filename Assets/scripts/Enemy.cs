@@ -6,15 +6,19 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    
+    //gold gained when defeating enemy
+    public int goldDropped = 3;
+
     public GameManager gameManager;
     public Rigidbody2D rb;
 
+    //set on for debugging, set off for game
     public bool active = false;
-
+    //movement speed
     public int speed = 2;
+    //health
     public int HP = 10;
-
+    //damage done if tower in reached
     public int power = 1;
 
     
@@ -30,7 +34,7 @@ public class Enemy : MonoBehaviour
             path.Add(childTransform.position);
 
         }
-        //set on for debugging, set off for game
+        
         if (active)
         {
             Go();
@@ -55,7 +59,7 @@ public class Enemy : MonoBehaviour
         if(HP <= 0)
         {
             Debug.Log(this + "died");
-
+            gameManager.Gold += goldDropped;
             Destroy(this.gameObject);
         }
     }
