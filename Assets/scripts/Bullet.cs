@@ -23,11 +23,12 @@ public class Bullet : MonoBehaviour
     {
         targetEnemy = target;
         //Debug.Log("shot bullet");
-        StartCoroutine(Fly(power,speed));
+        StartCoroutine(Fly(target,power, speed));
     }
 
-    IEnumerator Fly(int power, float speed)
+    IEnumerator Fly(Enemy Target, int power, float speed)
     {
+        targetEnemy = Target;
         while (Vector2.Distance(rb.position, targetEnemy.transform.position) > 0.9f && targetEnemy != null)
         {
             
