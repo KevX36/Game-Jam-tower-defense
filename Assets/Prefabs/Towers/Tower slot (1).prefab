@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8946314225720312992}
   - component: {fileID: 6980791751165634693}
   m_Layer: 5
-  m_Name: AoE tower
+  m_Name: AoE tower Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 2151387214861609552}
   - component: {fileID: 2677640633089589851}
   m_Layer: 5
-  m_Name: Upgrade
+  m_Name: Upgrade Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -253,7 +253,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2151387214861609552}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1779176320101115757}
+        m_TargetAssemblyTypeName: TowerSlot, Assembly-CSharp
+        m_MethodName: UpgradeTower
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3250812273215542721
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,7 +553,7 @@ GameObject:
   - component: {fileID: 5244881330625844510}
   - component: {fileID: 4258079526804023568}
   m_Layer: 5
-  m_Name: Fast tower
+  m_Name: Fast tower Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -936,7 +948,7 @@ GameObject:
   - component: {fileID: 5468016720623728956}
   - component: {fileID: 5959661911992360546}
   m_Layer: 5
-  m_Name: sell
+  m_Name: sell Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1069,7 +1081,7 @@ GameObject:
   - component: {fileID: 815116273643547418}
   - component: {fileID: 6627389782050215520}
   m_Layer: 5
-  m_Name: Basic tower
+  m_Name: Basic tower Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1339,7 +1351,7 @@ GameObject:
   - component: {fileID: 1935255743408196329}
   - component: {fileID: 4802906848409754721}
   m_Layer: 5
-  m_Name: Strong Tower
+  m_Name: Strong Tower Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
     {
         if (Target == null)
         {
-            Debug.Log("target died before it was reached");
+            //Debug.Log("target died before it was reached");
             this.gameObject.SetActive(false);
         }
     }
@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour
     public virtual void shoot(Enemy target, int power, float speed,float Blast)
     {
         Target = target;
-        Debug.Log("shot bullet");
+        //Debug.Log("shot bullet");
         StartCoroutine(Fly(power,speed));
     }
 
@@ -32,7 +32,7 @@ public class Bullet : MonoBehaviour
         {
             
             Vector2 move = Vector2.MoveTowards(rb.position, Target.transform.position, speed * Time.fixedDeltaTime);
-            Debug.Log("Moving towards" + Target.transform.position);
+            //Debug.Log("Moving towards" + Target.transform.position);
             rb.MovePosition(move);
             
 
@@ -40,7 +40,7 @@ public class Bullet : MonoBehaviour
             yield return null;
         }
         
-        Debug.Log("hit target");
+        //Debug.Log("hit target");
         Target.TakeDamage(power);
         this.gameObject.SetActive(false);
     }

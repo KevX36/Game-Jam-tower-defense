@@ -52,8 +52,8 @@ public class TowerSlot : MonoBehaviour
 
     public void UpdatePriceText()
     {
-        sellButtonText.text = $"Sell: {(currentTower.cost * towerLevel)/3}";
-        upgardeButtonText.text = $"Upgrade {(currentTower.cost * towerLevel) / 2}: ";
+        sellButtonText.text = $"Sell: {(int)Mathf.Round((currentTower.cost * towerLevel) / 3)}";
+        upgardeButtonText.text = $"Upgrade: {(int)Mathf.Round((currentTower.cost * towerLevel) / 2)}";
     }
 
     public void BuyBasicTower()
@@ -91,22 +91,24 @@ public class TowerSlot : MonoBehaviour
             gameManager.Gold -= currentTower.cost;
             gameManager.UpdateGold();
             currentTower.gameObject.SetActive(true);
-            
+            UpdatePriceText();
             SwapMenu();
         }
         else
         {
             Debug.Log("not enough gold");
+            currentTower = null;
         }
         
     }
 
     public void SellTower()
     {
-        gameManager.Gold += (currentTower.cost * towerLevel) / 3;
+        Debug.Log("tried to sell tower");
+        gameManager.Gold += (int)Mathf.Round((currentTower.cost * towerLevel) / 3);
         
         currentTower = null;
-
+        gameManager.UpdateGold();
         towerLevel = 1;
         
         SwapMenu();
@@ -121,10 +123,13 @@ public class TowerSlot : MonoBehaviour
 
     public void UpgradeTower()
     {
-        if(gameManager.Gold <= (currentTower.cost * towerLevel) / 2)
+        Debug.Log("tried to upgrade tower");
+        if (gameManager.Gold >= (int)Mathf.Round((currentTower.cost * towerLevel) / 2))
         {
+            gameManager.Gold -= (int)Mathf.Round((currentTower.cost * towerLevel) / 2);
             Debug.Log("bought upgrade");
             currentTower.upgrade();
+            gameManager.UpdateGold();
             towerLevel += 1;
             UpdatePriceText();
         }
