@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: e7f4b1d4398f5524aafbc89f48dd0fcb
+guid: 834ed9ae55b74bd42a2607d64c873ad9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7567571274315289350
-    second: Fast_SpriteSheet_0
-  - first:
-      213: 6718473161129897357
-    second: Fast_SpriteSheet_1
-  - first:
-      213: -965346186365048431
-    second: Fast_SpriteSheet_2
-  - first:
-      213: -8205025930819942294
-    second: Fast_SpriteSheet_3
+      213: 5354429476588687777
+    second: Tree2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 512
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,89 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fast_SpriteSheet_0
+      name: Tree2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 400
-        height: 320
+        x: 284
+        y: 125
+        width: 454
+        height: 649
       alignment: 9
-      pivot: {x: 0.48385304, y: 0.68165296}
+      pivot: {x: 0.50000006, y: 0.011989364}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6035302baf9650960800000000000000
-      internalID: 7567571274315289350
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fast_SpriteSheet_1
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 0
-        width: 400
-        height: 320
-      alignment: 9
-      pivot: {x: 0.48788956, y: 0.6766071}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d8da42a7ebfcc3d50800000000000000
-      internalID: 6718473161129897357
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fast_SpriteSheet_2
-      rect:
-        serializedVersion: 2
-        x: 800
-        y: 0
-        width: 400
-        height: 320
-      alignment: 9
-      pivot: {x: 0.49192628, y: 0.68165296}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 199ee6412c66a92f0800000000000000
-      internalID: -965346186365048431
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fast_SpriteSheet_3
-      rect:
-        serializedVersion: 2
-        x: 1200
-        y: 0
-        width: 400
-        height: 320
-      alignment: 9
-      pivot: {x: 0.4878897, y: 0.6766071}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a68cb945364e12e80800000000000000
-      internalID: -8205025930819942294
+      spriteID: 1a113fe6d31ce4a40800000000000000
+      internalID: 5354429476588687777
       vertices: []
       indices: 
       edges: []
@@ -200,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e738919d32a12a94882915dc2ca5f4a6
+    spriteID: b22c71aaff30eee4aa4fb39456599693
     internalID: 0
     vertices: []
     indices: 
@@ -208,14 +133,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":400.0,"y":320.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Fast_SpriteSheet_0: 7567571274315289350
-      Fast_SpriteSheet_1: 6718473161129897357
-      Fast_SpriteSheet_2: -965346186365048431
-      Fast_SpriteSheet_3: -8205025930819942294
+      Tree2_0: 5354429476588687777
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

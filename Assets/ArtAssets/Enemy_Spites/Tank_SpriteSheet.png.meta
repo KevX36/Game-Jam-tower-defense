@@ -117,7 +117,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 400
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -173,8 +173,8 @@ TextureImporter:
         y: 0
         width: 650
         height: 690
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55247754, y: 0.24902038}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -195,8 +195,8 @@ TextureImporter:
         y: 0
         width: 650
         height: 690
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.55247754, y: 0.24141493}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -217,8 +217,8 @@ TextureImporter:
         y: 0
         width: 650
         height: 690
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.560551, y: 0.24521765}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -239,8 +239,8 @@ TextureImporter:
         y: 0
         width: 650
         height: 690
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5524775, y: 0.24521765}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -257,7 +257,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8fa7844bc32a1194388c9b1f3d847b70
+    spriteID: bb5557b92071f5e4b8a586df22b23934
     internalID: 0
     vertices: []
     indices: 
