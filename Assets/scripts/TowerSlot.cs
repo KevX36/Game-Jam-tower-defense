@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class TowerSlot : MonoBehaviour
 {
@@ -36,22 +37,26 @@ public class TowerSlot : MonoBehaviour
 
     public void BuyBasicTower()
     {
+        Debug.Log("tried to buy basic tower");
         currentTower = towers[0];
         ActiveTower();
     }
 
     public void BuyFastTower()
     {
+        Debug.Log("tried to buy fast tower");
         currentTower = towers[1];
         ActiveTower();
     }
     public void BuyStrongTower()
     {
+        Debug.Log("tried to buy strong tower");
         currentTower = towers[2];
         ActiveTower();
     }
     public void BuyAoETower()
     {
+        Debug.Log("tried to buy AoE tower");
         currentTower = towers[3];
         ActiveTower();
     }
@@ -60,9 +65,14 @@ public class TowerSlot : MonoBehaviour
     {
         if(currentTower.cost <= gameManager.Gold)
         {
+            Debug.Log("bought tower");
             gameManager.Gold -= currentTower.cost;
             currentTower.gameObject.SetActive(true);
             towerBought = true;
+        }
+        else
+        {
+            Debug.Log("not enough gold");
         }
     }
 
@@ -73,6 +83,7 @@ public class TowerSlot : MonoBehaviour
         currentTower = null;
 
         towerLevel = 1;
+        towerBought = false;
 
         for (int i = 0; i < towers.Length; i++)
         {

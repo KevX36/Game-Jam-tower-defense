@@ -2,9 +2,12 @@ using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    public TextMeshProUGUI goldAmount;
+    public TextMeshProUGUI HealthLeft;
     //holds the path enemies take
     public GameObject enemyPath;
     //towns health
@@ -45,6 +48,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void UpdateGold()
+    {
 
+    }
+
+    public void UpdateHealth()
+    {
+
+    }
+
+    private void Start()
+    {
+        
+    }
+    private void Update()
+    {
+        
+    }
 
 }
