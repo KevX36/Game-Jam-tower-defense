@@ -522,6 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55c36cae3a3a0a5498c28e4119f89cdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tower
+  cost: 5
   DMG: 1
   fireRate: 2
   shotCoolDown: 5
@@ -548,8 +549,11 @@ MonoBehaviour:
   - {fileID: 6915142086490527452}
   shotTimer: 0
   bulletSpeed: 10
+  blastRange: 3
   fireRange: {fileID: 0}
   targets: []
+  towerType: 0
+  UpgradeBoost: 0.2
 --- !u!1 &6043515558663205528
 GameObject:
   m_ObjectHideFlags: 0

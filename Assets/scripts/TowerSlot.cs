@@ -119,7 +119,20 @@ public class TowerSlot : MonoBehaviour
         }
     }
 
-    
+    public void UpgradeTower()
+    {
+        if(gameManager.Gold <= (currentTower.cost * towerLevel) / 2)
+        {
+            Debug.Log("bought upgrade");
+            currentTower.upgrade();
+            towerLevel += 1;
+            UpdatePriceText();
+        }
+        else
+        {
+            Debug.Log("could not afford upgrade");
+        }
+    }
     public void SwapMenu()
     {
         if (!towerBought)

@@ -15,7 +15,7 @@ public class Bombs : Bullet
     public CircleCollider2D blastRange;
     public override void shoot(Enemy target, int power, float speed,float Blast)
     {
-        
+        blastRange.radius = Blast;
         Power = power;
         Debug.Log("shot bullet");
         StartCoroutine(Fly(target.transform, speed));

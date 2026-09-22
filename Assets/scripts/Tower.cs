@@ -90,8 +90,62 @@ public class Tower : MonoBehaviour
 
     }
     public TowerType towerType;
+    public float UpgradeBoost;
     public void upgrade()
     {
+
+        switch (towerType)
+        {
+
+            case TowerType.basic:
+
+                bulletSpeed += (int)Mathf.Round(UpgradeBoost);
+
+
+                break;
+
+
+            case TowerType.fast:
+
+                fireRate += UpgradeBoost;
+
+
+
+                break;
+
+
+            case TowerType.strong:
+
+                DMG += (int)Mathf.Round(UpgradeBoost);
+
+
+
+
+                break;
+
+
+
+
+
+
+
+            case TowerType.AoE:
+
+                blastRange += UpgradeBoost;
+
+
+
+                break;
+
+
+        }
+
+
+
+
+
+
+
 
     }
 }

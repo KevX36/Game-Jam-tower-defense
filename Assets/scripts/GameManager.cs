@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     public float waveSpeed4 = 5.0f;
     public float waveSpeed5 = 5.0f;
 
+    public float wavePause = 3;
+
     IEnumerator wave1()
     {
         while (wave1enemies.Count > 0)
@@ -46,6 +48,88 @@ public class GameManager : MonoBehaviour
 
             
         }
+
+        yield return new WaitForSecondsRealtime(wavePause);
+        StartCoroutine(wave2());
+    }
+    IEnumerator wave2()
+    {
+        while (wave2enemies.Count > 0)
+        {
+            for (int i = 0; i < wave2enemies.Count; i++)
+            {
+                wave2enemies[i].gameObject.SetActive(true);
+                wave2enemies[i].Go();
+
+
+                yield return new WaitForSecondsRealtime(waveSpeed1);
+            }
+
+
+
+        }
+
+        yield return new WaitForSecondsRealtime(wavePause);
+        StartCoroutine(wave3());
+    }
+    IEnumerator wave3()
+    {
+        while (wave3enemies.Count > 0)
+        {
+            for (int i = 0; i < wave3enemies.Count; i++)
+            {
+                wave3enemies[i].gameObject.SetActive(true);
+                wave3enemies[i].Go();
+
+
+                yield return new WaitForSecondsRealtime(waveSpeed3);
+            }
+
+
+
+        }
+
+        yield return new WaitForSecondsRealtime(wavePause);
+        StartCoroutine(wave4());
+    }
+    IEnumerator wave4()
+    {
+        while (wave4enemies.Count > 0)
+        {
+            for (int i = 0; i < wave4enemies.Count; i++)
+            {
+                wave4enemies[i].gameObject.SetActive(true);
+                wave4enemies[i].Go();
+
+
+                yield return new WaitForSecondsRealtime(waveSpeed4);
+            }
+
+
+
+        }
+
+        yield return new WaitForSecondsRealtime(wavePause);
+        StartCoroutine(wave5());
+    }
+    IEnumerator wave5()
+    {
+        while (wave5enemies.Count > 0)
+        {
+            for (int i = 0; i < wave5enemies.Count; i++)
+            {
+                wave5enemies[i].gameObject.SetActive(true);
+                wave5enemies[i].Go();
+
+
+                yield return new WaitForSecondsRealtime(waveSpeed5);
+            }
+
+
+
+        }
+
+        yield return new WaitForSecondsRealtime(wavePause);
     }
 
     public void UpdateGold()
@@ -62,6 +146,7 @@ public class GameManager : MonoBehaviour
     {
         UpdateGold();
         UpdateHealth();
+        StartCoroutine(wave1());
     }
     private void Update()
     {
