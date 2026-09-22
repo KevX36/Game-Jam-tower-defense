@@ -522,7 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55c36cae3a3a0a5498c28e4119f89cdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tower
-  cost: 5
+  cost: 15
   DMG: 1
   fireRate: 2
   shotCoolDown: 5

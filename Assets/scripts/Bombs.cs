@@ -17,24 +17,25 @@ public class Bombs : Bullet
     {
         blastRange.radius = Blast;
         Power = power;
-        //Debug.Log("shot bullet");
+        Debug.Log("shot bullet");
         StartCoroutine(Fly(target.transform, speed));
     }
 
     IEnumerator Fly(Transform Target, float speed)
     {
+        Debug.Log("bomb is flying");
         target.transform.position = Target.transform.position;
         while (Vector2.Distance(rb.position, target.transform.position) > 0.9f && Target != null)
         {
             Vector2 move = Vector2.MoveTowards(rb.position, target.transform.position, speed * Time.fixedDeltaTime);
-            //Debug.Log("Moving towards" + Target.position);
+            Debug.Log("Moving towards" + Target.position);
             rb.MovePosition(move);
 
 
 
             yield return null;
         }
-        //Debug.Log("bomb go boom");
+        Debug.Log("bomb go boom");
         blastRange.enabled = true;
         yield return new WaitForSecondsRealtime(0.001f);
         this.gameObject.SetActive(false);

@@ -46,21 +46,21 @@ public class Tower : MonoBehaviour
     //checks when enemies enter firing range
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("enemy enterd range");
+        //Debug.Log("enemy enterd range");
         if (collision.gameObject.CompareTag("Enemy"))
         {
             targets.Add(collision.gameObject.GetComponent<Enemy>());
-            Debug.Log($"added {collision} to targets");
+            //Debug.Log($"added {collision} to targets");
         }
     }
     //checks when enemies leave firing range
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("enemy left range");
+        //Debug.Log("enemy left range");
         if (collision.gameObject.CompareTag("Enemy"))
         {
             targets.Remove(collision.gameObject.GetComponent<Enemy>());
-            Debug.Log($"removed {collision} to targets");
+            //Debug.Log($"removed {collision} to targets");
         }
     }
     //makes the tower shoot the first enemy to enter firing range

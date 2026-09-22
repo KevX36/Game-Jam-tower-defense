@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour
     }
     private void Update()
     {
-        if (Target == null)
+        if (targetEnemy == null)
         {
             //Debug.Log("target died before it was reached");
             this.gameObject.SetActive(false);
@@ -18,20 +18,20 @@ public class Bullet : MonoBehaviour
     }
 
     public Rigidbody2D rb;
-    public Enemy Target;
+    public Enemy targetEnemy;
     public virtual void shoot(Enemy target, int power, float speed,float Blast)
     {
-        Target = target;
+        targetEnemy = target;
         //Debug.Log("shot bullet");
         StartCoroutine(Fly(power,speed));
     }
 
     IEnumerator Fly(int power, float speed)
     {
-        while (Vector2.Distance(rb.position, Target.transform.position) > 0.9f && Target != null)
+        while (Vector2.Distance(rb.position, targetEnemy.transform.position) > 0.9f && targetEnemy != null)
         {
             
-            Vector2 move = Vector2.MoveTowards(rb.position, Target.transform.position, speed * Time.fixedDeltaTime);
+            Vector2 move = Vector2.MoveTowards(rb.position, targetEnemy.transform.position, speed * Time.fixedDeltaTime);
             //Debug.Log("Moving towards" + Target.transform.position);
             rb.MovePosition(move);
             
@@ -39,9 +39,9 @@ public class Bullet : MonoBehaviour
 
             yield return null;
         }
-        
+
         //Debug.Log("hit target");
-        Target.TakeDamage(power);
+        targetEnemy.TakeDamage(power);
         this.gameObject.SetActive(false);
     }
 }
