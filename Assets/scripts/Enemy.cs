@@ -74,7 +74,7 @@ public class Enemy : MonoBehaviour
         if (path.Count > 1)
         {
             speed += (gameManager.currentWave - 1);
-            HP += (gameManager.currentWave-1) * 2;
+            HP += (int)Mathf.Round((gameManager.currentWave - 1) * 1.5f);
             goldDropped *= gameManager.currentWave;
             StartCoroutine(Move());
         }
