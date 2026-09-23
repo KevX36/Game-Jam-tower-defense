@@ -139,9 +139,25 @@ public class GameManager : MonoBehaviour
             StartCoroutine(wave1());
         }
     }
+    public void Win()
+    {
+
+    }
+    public void Lose()
+    {
+        StopAllCoroutines();
+    }
+    public Enemy boss;
     private void Update()
     {
-        
+        if(TownHealth <= 0)
+        {
+            Lose();
+        }
+        if(boss.HP <= 0)
+        {
+            Win();
+        }
     }
 
 }

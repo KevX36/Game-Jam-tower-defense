@@ -8056,6 +8056,7 @@ MonoBehaviour:
   waveSpeed5: 2
   wavePause: 10
   debuging: 0
+  boss: {fileID: 144161469}
 --- !u!4 &1609823299
 Transform:
   m_ObjectHideFlags: 0

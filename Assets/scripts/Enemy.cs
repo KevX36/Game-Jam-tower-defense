@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
     public int power = 1;
 
     
+    
 
     public List<Vector2> path = new List<Vector2>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
