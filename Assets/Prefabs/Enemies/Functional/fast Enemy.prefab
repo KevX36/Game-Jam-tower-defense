@@ -111,7 +111,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   rb: {fileID: 1405564364298555826}
   active: 0
-  speed: 4
+  speed: 3
   HP: 12
   power: 1
   path: []
