@@ -31,6 +31,7 @@ public class Bombs : Bullet
         target.transform.position = Target.transform.position;
         while (Vector2.Distance(rb.position, target.transform.position) > 0.9f && Target != null)
         {
+            transform.up = Target.transform.position - transform.position;
             Vector2 move = Vector2.MoveTowards(rb.position, target.transform.position, speed * Time.fixedDeltaTime);
             //Debug.Log("Moving towards" + Target.position);
             rb.MovePosition(move);

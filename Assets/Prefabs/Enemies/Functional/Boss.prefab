@@ -112,7 +112,7 @@ MonoBehaviour:
   rb: {fileID: 1845317455382985399}
   active: 0
   speed: 3
-  HP: 50
+  HP: 100
   power: 10
   path: []
 --- !u!50 &1845317455382985399

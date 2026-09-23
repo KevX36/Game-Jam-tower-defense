@@ -2088,7 +2088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5640719931025547944, guid: c236a1f30d4a2084498e6d15b6ab3133, type: 3}
       propertyPath: DMG
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5640719931025547944, guid: c236a1f30d4a2084498e6d15b6ab3133, type: 3}
       propertyPath: fireRate

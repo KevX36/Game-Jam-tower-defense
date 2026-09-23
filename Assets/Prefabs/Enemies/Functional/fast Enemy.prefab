@@ -107,12 +107,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8318fe874ca4ef34d83181105b8b979c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  goldDropped: 7
+  goldDropped: 10
   gameManager: {fileID: 0}
   rb: {fileID: 1405564364298555826}
   active: 0
   speed: 4
-  HP: 10
+  HP: 7
   power: 1
   path: []
 --- !u!50 &1405564364298555826

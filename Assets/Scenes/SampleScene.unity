@@ -7799,6 +7799,7 @@ MonoBehaviour:
   waveSpeed4: 5
   waveSpeed5: 5
   wavePause: 3
+  debuging: 0
 --- !u!4 &1609823299
 Transform:
   m_ObjectHideFlags: 0
@@ -10163,6 +10164,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 13881939244233502, guid: 700842383656dce47b5a5541c1b884f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1779176320101115757, guid: 700842383656dce47b5a5541c1b884f6, type: 3}
       propertyPath: gameManager
       value: 
@@ -10207,6 +10212,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tower slot (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6001977962349587182, guid: 700842383656dce47b5a5541c1b884f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6212531417064757662, guid: 700842383656dce47b5a5541c1b884f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.37
@@ -10245,6 +10254,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6212531417064757662, guid: 700842383656dce47b5a5541c1b884f6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6377259295743624704, guid: 700842383656dce47b5a5541c1b884f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9041233844486694048, guid: 700842383656dce47b5a5541c1b884f6, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

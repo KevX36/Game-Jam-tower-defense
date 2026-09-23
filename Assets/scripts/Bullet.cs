@@ -1,5 +1,7 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
+using static UnityEngine.GraphicsBuffer;
 
 public class Bullet : MonoBehaviour
 {
@@ -31,8 +33,9 @@ public class Bullet : MonoBehaviour
         targetEnemy = Target;
         while (Vector2.Distance(rb.position, targetEnemy.transform.position) > 0.9f && targetEnemy != null)
         {
-            
+            transform.up = Target.transform.position - transform.position;
             Vector2 move = Vector2.MoveTowards(rb.position, targetEnemy.transform.position, speed * Time.fixedDeltaTime);
+
             //Debug.Log("Moving towards" + Target.transform.position);
             rb.MovePosition(move);
             

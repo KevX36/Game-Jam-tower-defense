@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator wave1()
     {
+        currentWave = 1;
         while (wave1enemies.Count > 0)
         {
             for(int i = 0; i < wave1enemies.Count; i++)
@@ -56,6 +57,7 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator wave2()
     {
+        currentWave = 2;
         while (wave2enemies.Count > 0)
         {
             for (int i = 0; i < wave2enemies.Count; i++)
@@ -76,6 +78,7 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator wave3()
     {
+        currentWave = 3;
         while (wave3enemies.Count > 0)
         {
             for (int i = 0; i < wave3enemies.Count; i++)
@@ -96,6 +99,7 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator wave4()
     {
+        currentWave = 4;
         while (wave4enemies.Count > 0)
         {
             for (int i = 0; i < wave4enemies.Count; i++)
@@ -116,6 +120,7 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator wave5()
     {
+        currentWave = 5;
         while (wave5enemies.Count > 0)
         {
             for (int i = 0; i < wave5enemies.Count; i++)
