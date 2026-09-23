@@ -67,11 +67,14 @@ public class Enemy : MonoBehaviour
 
     public void Go()
     {
+
         if (path.Count == 0) return;
         this.transform.position = path[0];
         active = true;
         if (path.Count > 1)
         {
+            speed += (gameManager.currentWave - 1)/2;
+            HP += (gameManager.currentWave-1) * 2;
             StartCoroutine(Move());
         }
     }
