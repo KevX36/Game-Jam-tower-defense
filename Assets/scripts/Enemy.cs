@@ -73,9 +73,12 @@ public class Enemy : MonoBehaviour
         active = true;
         if (path.Count > 1)
         {
-            speed += (gameManager.currentWave - 1)/2;
-            HP += (int)Mathf.Round((gameManager.currentWave - 1) * 1.5f);
-            goldDropped *= gameManager.currentWave;
+            if(gameManager.currentWave != 1)
+            {
+                speed += (gameManager.currentWave) / 2;
+                HP += (int)Mathf.Round((gameManager.currentWave - 1) * 1.5f);
+                goldDropped = (goldDropped * gameManager.currentWave) / 2;
+            }
             StartCoroutine(Move());
         }
     }

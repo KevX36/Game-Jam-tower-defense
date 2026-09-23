@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8318fe874ca4ef34d83181105b8b979c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  goldDropped: 5
+  goldDropped: 6
   gameManager: {fileID: 0}
   rb: {fileID: 1845317455382985399}
   active: 0

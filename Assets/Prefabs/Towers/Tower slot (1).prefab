@@ -1930,7 +1930,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1101414920703349389, guid: 72bc0560159bb21489891143e10b7ddd, type: 3}
       propertyPath: UpgradeBoost
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5916624229059968519, guid: 72bc0560159bb21489891143e10b7ddd, type: 3}
       propertyPath: m_Name
@@ -2063,7 +2063,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7576279780097488210, guid: 58f29c99d64edd54793cbb98f6263da8, type: 3}
       propertyPath: UpgradeBoost
-      value: 1
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
