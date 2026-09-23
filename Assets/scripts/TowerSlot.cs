@@ -44,7 +44,7 @@ public class TowerSlot : MonoBehaviour
             towers[i].gameObject.SetActive(false);
         }
         shopButtonText[0].text = $"archer ({towers[0].cost})";
-        shopButtonText[1].text = $"Mage ({towers[1].cost})";
+        shopButtonText[1].text = $"Bolt ({towers[1].cost})";
         shopButtonText[2].text = $"Balasita ({towers[2].cost})";
         shopButtonText[3].text = $"Bomb ({towers[3].cost})";
     }

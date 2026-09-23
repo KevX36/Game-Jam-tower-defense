@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tower
   cost: 20
-  DMG: 10
+  DMG: 5
   fireRate: 1
   shotCoolDown: 5
   bullets:

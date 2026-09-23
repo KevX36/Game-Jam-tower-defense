@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI goldAmount;
     public TextMeshProUGUI HealthLeft;
+    public TextMeshProUGUI WaveText;
     //holds the path enemies take
     public GameObject enemyPath;
     //towns health
@@ -37,19 +38,14 @@ public class GameManager : MonoBehaviour
     IEnumerator wave1()
     {
         currentWave = 1;
-        while (wave1enemies.Count > 0)
+        updateWave();
+        for (int i = 0; i < wave1enemies.Count; i++)
         {
-            for(int i = 0; i < wave1enemies.Count; i++)
-            {
-                wave1enemies[i].gameObject.SetActive(true);
-                wave1enemies[i].Go();
+            wave1enemies[i].gameObject.SetActive(true);
+            wave1enemies[i].Go();
 
 
-                yield return new WaitForSecondsRealtime(waveSpeed1);
-            }
-
-
-            
+            yield return new WaitForSecondsRealtime(waveSpeed1);
         }
 
         yield return new WaitForSecondsRealtime(wavePause);
@@ -58,19 +54,14 @@ public class GameManager : MonoBehaviour
     IEnumerator wave2()
     {
         currentWave = 2;
-        while (wave2enemies.Count > 0)
+        updateWave();
+        for (int i = 0; i < wave2enemies.Count; i++)
         {
-            for (int i = 0; i < wave2enemies.Count; i++)
-            {
-                wave2enemies[i].gameObject.SetActive(true);
-                wave2enemies[i].Go();
+            wave2enemies[i].gameObject.SetActive(true);
+            wave2enemies[i].Go();
 
 
-                yield return new WaitForSecondsRealtime(waveSpeed1);
-            }
-
-
-
+            yield return new WaitForSecondsRealtime(waveSpeed1);
         }
 
         yield return new WaitForSecondsRealtime(wavePause);
@@ -79,19 +70,14 @@ public class GameManager : MonoBehaviour
     IEnumerator wave3()
     {
         currentWave = 3;
-        while (wave3enemies.Count > 0)
+        updateWave();
+        for (int i = 0; i < wave3enemies.Count; i++)
         {
-            for (int i = 0; i < wave3enemies.Count; i++)
-            {
-                wave3enemies[i].gameObject.SetActive(true);
-                wave3enemies[i].Go();
+            wave3enemies[i].gameObject.SetActive(true);
+            wave3enemies[i].Go();
 
 
-                yield return new WaitForSecondsRealtime(waveSpeed3);
-            }
-
-
-
+            yield return new WaitForSecondsRealtime(waveSpeed3);
         }
 
         yield return new WaitForSecondsRealtime(wavePause);
@@ -99,20 +85,16 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator wave4()
     {
+
         currentWave = 4;
-        while (wave4enemies.Count > 0)
+        updateWave();
+        for (int i = 0; i < wave4enemies.Count; i++)
         {
-            for (int i = 0; i < wave4enemies.Count; i++)
-            {
-                wave4enemies[i].gameObject.SetActive(true);
-                wave4enemies[i].Go();
+            wave4enemies[i].gameObject.SetActive(true);
+            wave4enemies[i].Go();
 
 
-                yield return new WaitForSecondsRealtime(waveSpeed4);
-            }
-
-
-
+            yield return new WaitForSecondsRealtime(waveSpeed4);
         }
 
         yield return new WaitForSecondsRealtime(wavePause);
@@ -121,19 +103,14 @@ public class GameManager : MonoBehaviour
     IEnumerator wave5()
     {
         currentWave = 5;
-        while (wave5enemies.Count > 0)
+        updateWave();
+        for (int i = 0; i < wave5enemies.Count; i++)
         {
-            for (int i = 0; i < wave5enemies.Count; i++)
-            {
-                wave5enemies[i].gameObject.SetActive(true);
-                wave5enemies[i].Go();
+            wave5enemies[i].gameObject.SetActive(true);
+            wave5enemies[i].Go();
 
 
-                yield return new WaitForSecondsRealtime(waveSpeed5);
-            }
-
-
-
+            yield return new WaitForSecondsRealtime(waveSpeed5);
         }
 
         yield return new WaitForSecondsRealtime(wavePause);
@@ -147,6 +124,10 @@ public class GameManager : MonoBehaviour
     public void UpdateHealth()
     {
         HealthLeft.text = $"Town Health: {TownHealth}";
+    }
+    public void updateWave()
+    {
+        WaveText.text = $"Wave: {currentWave}";
     }
 
     private void Start()
