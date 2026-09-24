@@ -1926,7 +1926,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1101414920703349389, guid: 72bc0560159bb21489891143e10b7ddd, type: 3}
       propertyPath: bulletSpeed
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1101414920703349389, guid: 72bc0560159bb21489891143e10b7ddd, type: 3}
       propertyPath: UpgradeBoost

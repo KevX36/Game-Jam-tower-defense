@@ -5,6 +5,7 @@ public class Bombs : Bullet
 {
     private void Start()
     {
+        Blast.Stop();
         rb = this.GetComponent<Rigidbody2D>();
         blastRange = this.GetComponent<CircleCollider2D>();
         blastRange.enabled = false;
@@ -17,9 +18,11 @@ public class Bombs : Bullet
     public GameObject target;
     public int Power;
     public CircleCollider2D blastRange;
-    public override void shoot(Enemy target, int power, float speed,float Blast)
+    public override void shoot(Enemy target, int power, float speed,float BlastZone)
     {
-        blastRange.radius = Blast;
+        blastRange.radius = BlastZone;
+        Blast.Stop();
+        Blast.startSpeed = BlastZone - 1;
         Power = power;
         //Debug.Log("shot bullet");
         StartCoroutine(Fly(target.transform, speed));
@@ -29,7 +32,7 @@ public class Bombs : Bullet
     {
         
         target.transform.position = Target.transform.position;
-        while (Vector2.Distance(rb.position, target.transform.position) > 0.9f && Target != null)
+        while (Vector2.Distance(rb.position, target.transform.position) > 0.1f && Target != null)
         {
             transform.up = Target.transform.position - transform.position;
             Vector2 move = Vector2.MoveTowards(rb.position, target.transform.position, speed * Time.fixedDeltaTime);
@@ -42,10 +45,11 @@ public class Bombs : Bullet
         }
         //Debug.Log("bomb go boom");
         blastRange.enabled = true;
-        yield return new WaitForSecondsRealtime(0.001f);
+        Blast.Play();
+        yield return new WaitForSecondsRealtime(0.7f);
         this.gameObject.SetActive(false);
     }
-
+    public ParticleSystem Blast;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("touched enemy");
