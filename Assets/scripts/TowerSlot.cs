@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class TowerSlot : MonoBehaviour
 {
-
+    
     
     //set basic tower to 0, fast to 1, strong to 2, and bomb to 3
     public Tower[] towers = new Tower[4];

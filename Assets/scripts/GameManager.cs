@@ -8,10 +8,12 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public AudioSource damageSFX;
+    public AudioSource music;
     public void TakeDamage(int DMG)
     {
         damageSFX.Play();
         TownHealth -=DMG;
+        if(TownHealth < 0) TownHealth = 0;
     }
     public List<TowerSlot> Towers;
     public TextMeshProUGUI goldAmount;
@@ -157,6 +159,7 @@ public class GameManager : MonoBehaviour
         {
             Towers[i].CloseMenus();
         }
+        music.Stop();
         winScreen.SetActive(true);
         
     }
@@ -165,13 +168,22 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < Towers.Count; i++)
         {
             Towers[i].CloseMenus();
+            for(int j = 0; j < Towers[i].towers.Length; j++)
+            {
+                Towers[i].towers[j].loss = true;
+            }
         }
         StopAllCoroutines();
+        music.Stop();
         loseScreen.SetActive(true);
     }
     public void ReStart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
     }
     public Enemy boss;
     private void Update()

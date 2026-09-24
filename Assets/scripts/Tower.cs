@@ -7,6 +7,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Tower : MonoBehaviour
 {
+    public bool loss = false;
     //cost to buy tower
     public int cost = 5;
     //damage shots will do
@@ -37,7 +38,7 @@ public class Tower : MonoBehaviour
     void Update()
     {
         shotTimer -= Time.deltaTime*fireRate;
-        if (targets.Any() && shotTimer <=0)
+        if (targets.Any() && shotTimer <=0 && !loss)
         {
             shotTimer = shotCoolDown;
             fire();

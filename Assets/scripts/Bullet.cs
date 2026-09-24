@@ -31,7 +31,7 @@ public class Bullet : MonoBehaviour
     IEnumerator Fly(Enemy Target, int power, float speed)
     {
         targetEnemy = Target;
-        while (Vector2.Distance(rb.position, targetEnemy.transform.position) > 0.9f && targetEnemy != null)
+        while (Vector2.Distance(rb.position, targetEnemy.transform.position) > 0.5f && targetEnemy != null)
         {
             transform.up = Target.transform.position - transform.position;
             Vector2 move = Vector2.MoveTowards(rb.position, targetEnemy.transform.position, speed * Time.fixedDeltaTime);
