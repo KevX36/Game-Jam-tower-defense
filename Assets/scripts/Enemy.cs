@@ -88,7 +88,7 @@ public class Enemy : MonoBehaviour
     {
         for (int i = 1; i < path.Count; i++)
         {
-            while (Vector2.Distance(rb.position, path[i]) > 0.9f)
+            while (Vector2.Distance(rb.position, path[i]) > 0.09f)
             {
                 Vector2 move = Vector2.MoveTowards(rb.position, path[i], speed * Time.fixedDeltaTime);
                 //Debug.Log("Moving towards" + path[i]);
