@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "setting buttons",
+    "maps": [
+        {
+            "name": "Settings",
+            "id": "f836b8d5-706e-475d-ba20-5a5dd9b5547b",
+            "actions": [
+                {
+                    "name": "Quit",
+                    "type": "Button",
+                    "id": "84675712-f242-4682-83cd-a263bb144a68",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b4146244-c688-4674-af5d-8032d03df801",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Quit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

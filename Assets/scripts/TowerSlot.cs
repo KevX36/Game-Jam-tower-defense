@@ -158,14 +158,7 @@ public class TowerSlot : MonoBehaviour
     {
         sellAndUpgradeMenu.gameObject.SetActive(false);
         buyMenu.gameObject.SetActive(false);
-        for(int i = 0; i < towers.Length; i++)
-        {
-            for(int j = 0; j < towers[i].bullets.Count; j++)
-            {
-                towers[i].bullets[j].gameObject.SetActive(false);
-                towers[i].bullets[j].StopAllCoroutines();
-            }
-        }
+        
     }
 
 

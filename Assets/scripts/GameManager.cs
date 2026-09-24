@@ -170,10 +170,7 @@ public class GameManager : MonoBehaviour
     public Enemy boss;
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
+        
         if (TownHealth <= 0)
         {
             Lose();
@@ -182,6 +179,10 @@ public class GameManager : MonoBehaviour
         {
             Win();
         }
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
 }
