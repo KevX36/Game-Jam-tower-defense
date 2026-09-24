@@ -3,9 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public List<TowerSlot> Towers;
     public TextMeshProUGUI goldAmount;
     public TextMeshProUGUI HealthLeft;
     public TextMeshProUGUI WaveText;
@@ -113,7 +115,7 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSecondsRealtime(waveSpeed5);
         }
 
-        yield return new WaitForSecondsRealtime(wavePause);
+        
     }
 
     public void UpdateGold()
@@ -132,6 +134,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        winScreen.SetActive(false);
+        loseScreen.SetActive(false);
         UpdateGold();
         UpdateHealth();
         if (!debuging)
@@ -139,22 +143,42 @@ public class GameManager : MonoBehaviour
             StartCoroutine(wave1());
         }
     }
+    public GameObject winScreen;
+    public GameObject loseScreen;
     public void Win()
     {
-
+        for(int i = 0;i < Towers.Count;i++)
+        {
+            Towers[i].CloseMenus();
+        }
+        winScreen.SetActive(true);
+        
     }
     public void Lose()
     {
+        for (int i = 0; i < Towers.Count; i++)
+        {
+            Towers[i].CloseMenus();
+        }
         StopAllCoroutines();
+        loseScreen.SetActive(true);
+    }
+    public void ReStart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public Enemy boss;
     private void Update()
     {
-        if(TownHealth <= 0)
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+        if (TownHealth <= 0)
         {
             Lose();
         }
-        if(boss.HP <= 0)
+        else if(boss.HP <= 0)
         {
             Win();
         }
