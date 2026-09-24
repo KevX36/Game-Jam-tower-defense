@@ -7,6 +7,12 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public AudioSource damageSFX;
+    public void TakeDamage(int DMG)
+    {
+        damageSFX.Play();
+        TownHealth -=DMG;
+    }
     public List<TowerSlot> Towers;
     public TextMeshProUGUI goldAmount;
     public TextMeshProUGUI HealthLeft;

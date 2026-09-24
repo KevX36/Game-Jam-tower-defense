@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public AudioSource damageSFX;
+    
     //gold gained when defeating enemy
     public int goldDropped = 3;
 
@@ -51,6 +53,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int DMG)
     {
         HP -= DMG;
+        damageSFX.Play();
         Debug.Log("got hit");
     }
     // Update is called once per frame
@@ -100,7 +103,7 @@ public class Enemy : MonoBehaviour
             }
         }
         Debug.Log(this + "attacked the town");
-        gameManager.TownHealth -= power;
+        gameManager.TakeDamage(power);
         gameManager.UpdateHealth();
         Destroy(this.gameObject);
     }
