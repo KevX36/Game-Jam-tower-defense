@@ -183,7 +183,7 @@ public class GameManager : MonoBehaviour
     }
     public void BackToMenu()
     {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("MainMenu");
     }
     public Enemy boss;
     private void Update()
