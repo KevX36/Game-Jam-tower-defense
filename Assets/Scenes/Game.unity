@@ -3560,7 +3560,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1609823298}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ReStart
+        m_MethodName: BackToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
