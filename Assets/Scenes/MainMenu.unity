@@ -11484,7 +11484,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Forest
 
-    Defence'
+    Defense'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: be9c7e9b669b62247bd7051156f1d43f, type: 2}
   m_sharedMaterial: {fileID: 7949841892308025969, guid: be9c7e9b669b62247bd7051156f1d43f, type: 2}
